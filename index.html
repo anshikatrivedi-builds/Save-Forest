@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Forest | Protect Our Green Planet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">🌲 Save<span>Forest</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#threats">Threats</a></li>
+        <li><a href="#help">How to Help</a></li>
+        <li><a href="#plant">Plant</a></li>
+        <li><a href="#pledge" class="btn-nav">Take Pledge</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="layer sky"></div>
+    <div class="layer sun" data-speed="0.15"></div>
+    <div class="layer mountains" data-speed="0.25"></div>
+    <div class="layer trees back" data-speed="0.4"></div>
+    <div class="layer trees front" data-speed="0.6"></div>
+    <div class="hero-content" data-speed="0.1">
+      <p class="eyebrow">Every tree counts</p>
+      <h1>Save the Forest,<br>Save the Future</h1>
+      <p class="sub">Forests give us oxygen, water, food and homes for millions of species. Join the movement to protect them before it is too late.</p>
+      <div class="hero-btns">
+        <a href="#plant" class="btn primary">Plant a Tree</a>
+        <a href="#pledge" class="btn ghost">Take the Pledge</a>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll ↓</div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section impact" id="impact">
+    <h2 class="title reveal">Why Forests Matter</h2>
+    <div class="stats">
+      <div class="stat reveal"><h3 data-count="31">0</h3><span>% of Earth's land is forest</span></div>
+      <div class="stat reveal"><h3 data-count="80">0</h3><span>% of land species live in forests</span></div>
+      <div class="stat reveal"><h3 data-count="1600">0</h3><span>million people depend on forests</span></div>
+      <div class="stat reveal"><h3 data-count="10">0</h3><span>million hectares lost every year</span></div>
+    </div>
+  </section>
+
+  <!-- THREATS -->
+  <section class="section dark" id="threats">
+    <h2 class="title light reveal">Threats to Our Forests</h2>
+    <p class="lead reveal">Hover or tap a card to flip it.</p>
+    <div class="flip-grid">
+      <div class="flip reveal"><div class="flip-inner">
+        <div class="face front-face"><span>🪓</span><h3>Deforestation</h3></div>
+        <div class="face back-face"><p>Forests are cleared for farming, mining and timber, destroying habitats in seconds that took centuries to grow.</p></div>
+      </div></div>
+      <div class="flip reveal"><div class="flip-inner">
+        <div class="face front-face"><span>🔥</span><h3>Wildfires</h3></div>
+        <div class="face back-face"><p>Climate change and human carelessness cause massive fires that release carbon and wipe out wildlife.</p></div>
+      </div></div>
+      <div class="flip reveal"><div class="flip-inner">
+        <div class="face front-face"><span>🏭</span><h3>Pollution</h3></div>
+        <div class="face back-face"><p>Acid rain and industrial waste poison soil and water, weakening trees and the life that depends on them.</p></div>
+      </div></div>
+      <div class="flip reveal"><div class="flip-inner">
+        <div class="face front-face"><span>🌡️</span><h3>Climate Change</h3></div>
+        <div class="face back-face"><p>Rising temperatures bring droughts, pests and disease that stress forests beyond their ability to recover.</p></div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP -->
+  <section class="section" id="help">
+    <h2 class="title reveal">How You Can Help</h2>
+    <div class="cards">
+      <div class="tilt reveal"><div class="icon">🌱</div><h3>Plant Trees</h3><p>Plant native trees in your neighbourhood, school or farm. One tree can absorb about 22 kg of CO₂ a year.</p></div>
+      <div class="tilt reveal"><div class="icon">♻️</div><h3>Reduce &amp; Recycle</h3><p>Use less paper, recycle, and choose products with sustainable forestry certification.</p></div>
+      <div class="tilt reveal"><div class="icon">📢</div><h3>Spread Awareness</h3><p>Talk to friends, share on social media and support laws that protect forests.</p></div>
+      <div class="tilt reveal"><div class="icon">🤝</div><h3>Support NGOs</h3><p>Donate or volunteer with organisations that restore forests and protect wildlife.</p></div>
+    </div>
+  </section>
+
+  <!-- PLANT -->
+  <section class="section plant" id="plant">
+    <h2 class="title light reveal">Plant Your Virtual Forest</h2>
+    <p class="lead reveal">Click anywhere on the ground to plant a tree.</p>
+    <div class="scene-wrap">
+      <div class="scene" id="scene"></div>
+    </div>
+    <div class="plant-info">
+      <p>Trees planted: <strong id="treeCount">0</strong></p>
+      <p>CO₂ absorbed per year: <strong id="co2Count">0</strong> kg</p>
+      <button class="btn ghost" id="resetBtn">Reset Forest</button>
+    </div>
+  </section>
+
+  <!-- PLEDGE -->
+  <section class="section" id="pledge">
+    <h2 class="title reveal">Take the Green Pledge</h2>
+    <form class="pledge-form reveal" id="pledgeForm">
+      <input type="text" id="pName" placeholder="Your Name" required>
+      <input type="email" id="pEmail" placeholder="Your Email" required>
+      <select id="pAction" required>
+        <option value="">I promise to...</option>
+        <option>Plant at least one tree</option>
+        <option>Reduce my paper use</option>
+        <option>Spread awareness</option>
+        <option>Support forest conservation</option>
+      </select>
+      <button type="submit" class="btn primary">Pledge Now</button>
+      <p class="msg" id="pledgeMsg"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p class="logo">🌲 Save<span>Forest</span></p>
+    <p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+    <small>© 2026 Save Forest. All rights reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
